@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Salesforce Web-to-Lead Form</title>
+    <style>
+        /* Reset basic styling */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Container styling */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f7f9fb;
+        }
+
+        .form-container {
+            max-width: 500px;
+            width: 100%;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Form title styling */
+        .form-container h2 {
+            font-size: 24px;
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 5px;
+        }
+
+        /* Input field styling */
+        input[type="text"], input[type="email"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input[type="text"]:focus, input[type="email"]:focus {
+            outline: none;
+            border-color: #6c63ff;
+        }
+
+        /* Submit button styling */
+        input[type="submit"] {
+            background-color: #6c63ff;
+            color: #ffffff;
+            cursor: pointer;
+            border: none;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #5753d3;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="form-container">
+        <h2>Contact Us</h2>
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8" method="POST">
+            <input type="hidden" name="oid" value="00DNS000003jHEI">
+            <input type="hidden" name="retURL" value="http://www.google.com">
+
+            <label for="first_name">First Name</label>
+            <input id="first_name" maxlength="40" name="first_name" type="text" placeholder="Enter your first name" required>
+
+            <label for="last_name">Last Name</label>
+            <input id="last_name" maxlength="80" name="last_name" type="text" placeholder="Enter your last name" required>
+
+            <label for="email">Email</label>
+            <input id="email" maxlength="80" name="email" type="email" placeholder="Enter your email" required>
+
+            <label for="company">Company</label>
+            <input id="company" maxlength="40" name="company" type="text" placeholder="Enter your company name" required>
+
+            <label for="city">City</label>
+            <input id="city" maxlength="40" name="city" type="text" placeholder="Enter your city" required>
+
+            <label for="state">State/Province</label>
+            <input id="state" maxlength="20" name="state" type="text" placeholder="Enter your state/province" required>
+
+            <input type="submit" name="submit" value="Submit">
+        </form>
+    </div>
+
+</body>
+</html>
